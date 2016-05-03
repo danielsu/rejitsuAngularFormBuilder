@@ -1,0 +1,99 @@
+.activityBlock {
+  border: 1px solid @color-task-border;
+  background-color: @color-task-bg;
+  margin: 1em 0;
+  height: auto;
+
+  overflow: hidden;
+  transition: height @transition-time-fast ease;
+
+  &.isActive {
+    // variable height needs to be set via javascript
+    h2:before {
+      transform: rotate(90deg);
+    }
+  }
+  h2 {
+    padding: 0.5em 1em 0.5em 0;
+    margin-left: 2.5em;
+    user-select: none;
+    cursor: pointer;
+    // minimize border left only visially, not by margin to allow click event at whole block element
+    border-top: 0.5em solid @color-task-bg;
+    border-bottom: 0.5em solid @color-task-bg;
+    //      border-left: 1px solid @color-list-border;
+
+    &:before {
+      float: left;
+      position: relative;
+      left: -1.5em;
+      transition: transform @transition-time-fast ease;
+      .fa;
+      content: "\f054"; // fa-chevron-right
+    }
+  }
+}
+
+.task {
+  // for optical
+  height: 3em;
+
+  &.done {
+    height: auto;
+
+    h2:before {
+      content: "\f00c"; // fa-check
+    }
+  }
+
+  .taskContentWrapper {
+    padding: 0.5em 1em 1em 1em;
+  }
+
+  // form styles
+  form>.checkbox,
+  form>.form-group {
+    clear: both
+  }
+
+  fieldset {
+    border: 1px solid black;
+    padding: 0.5em;
+  }
+  legend {
+    text-align: center;
+    font-size: 1em;
+    padding: 0 0.5em;
+    width: auto;
+    margin: 0;
+  }
+  .error,
+  .warning {
+    color: @color-state-warn;
+  }
+
+  // mobile first: singleColumn
+  fieldset {
+    width: 98%;
+    margin: 0 1%;
+    float: none;
+  }
+  &.twoColumns fieldset {
+    width: 48%;
+    margin: 0 1%;
+    float: left;
+  }
+}
+
+.taskContentWrapper form {
+  padding: 1em;
+  textarea {
+    width: 100%;
+    height: 10rem;
+    resize: none;
+    margin-top: @table-padding;
+  }
+  button {
+    //    float: right;
+  }
+}

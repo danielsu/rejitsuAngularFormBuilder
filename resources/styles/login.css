@@ -1,0 +1,67 @@
+/**
+* Contains only a small subset of styles for the login page.
+*/
+body {
+  background-color: #bebebe;
+  color: #000000;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    login view
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.login {
+  width: 360px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-left: -180px;
+  margin-top: -100px;
+  position: absolute;
+}
+.login input[type="text"],
+.login input[type="password"] {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid white;
+  padding-left: 2em;
+}
+.login .btn-default {
+  background: #ffffff;
+}
+.login .btn-default:hover {
+  background: #d8d8d8;
+}
+.login .btn {
+  margin-top: 20px;
+  border-radius: 0;
+  border: none;
+}
+.form-group {
+  position: relative;
+}
+.login label {
+  font-size: 1.25em;
+  position: absolute;
+  top: 2px;
+  left: 0.5em;
+}
+.login-error {
+  width: 700px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-left: -350px;
+  margin-top: -50px;
+  position: absolute;
+}
+.login-error a {
+  color: #283849;
+}
+.login-error a:hover {
+  color: #6995c0;
+}
+.login-error .alert-danger {
+  background: white;
+  border: 1px solid white;
+  border-radius: 0;
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fmain%2Fless%2FloginMaster.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22%3B%3B%3BAAKA%3BEACE%2CyBAAA%3BEACA%2CcAAA%3B%3B%3B%3B%3BAAOF%3BEACE%2CYAAA%3BEACA%2CaAAA%3BEACA%2CQAAA%3BEACA%2CSAAA%3BEACA%2CmBAAA%3BEACA%2CkBAAA%3BEACA%2CkBAAA%3B%3BAAPF%2CMAUE%2CMAAK%3BAAVP%2CMAWE%2CMAAK%3BEACH%2CcAAA%3BEACA%2CWAAA%3BEAEA%2C8BAAA%3BEACA%2CiBAAA%3B%3BAAhBJ%2CMAmBE%3BEAEE%2CmBAAA%3B%3BAACA%2CMAHF%2CaAGG%3BEAEC%2CmBAAA%3B%3BAAxBN%2CMA4BE%3BEACE%2CgBAAA%3BEACA%2CgBAAA%3BEACA%2CYAAA%3B%3BAAKJ%3BEACE%2CkBAAA%3B%3BAAGF%2CMAAO%3BEACL%2CiBAAA%3BEACA%2CkBAAA%3BEACA%2CQAAA%3BEACA%2CWAAA%3B%3BAAIF%3BEACE%2CYAAA%3BEACA%2CaAAA%3BEACA%2CQAAA%3BEACA%2CSAAA%3BEACA%2CmBAAA%3BEACA%2CiBAAA%3BEACA%2CkBAAA%3B%3BAAGF%2CYAAa%3BEACX%2CcAAA%3B%3BAAGF%2CYAAa%2CEAAC%3BEACZ%2CcAAA%3B%3BAAGF%2CYAAa%3BEACX%2CiBAAA%3BEACA%2CuBAAA%3BEACA%2CgBAAA%22%7D */

@@ -1,0 +1,67 @@
+// *********************
+// Off Canvas Layout
+// *********************
+#main {
+  position: relative;
+  overflow: hidden; // hide off canvas boxes
+  //  max-height: 100%;
+  top: 0;
+}
+
+.slidePageContainer {
+  .masterView,
+  .detailView {
+    // off-canvas design
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .masterView {
+    transform: translateX(0);
+  }
+
+  .detailView {
+    transform: translateX(100%);
+    position: absolute;
+    .absoluteBelowNavigation;
+    .scrollWrapper {
+      // hande navigation bar
+      .absoluteFullscreen;
+      top: @navigation-height-medium;
+      height: auto;
+    }
+  }
+}
+
+html.showDetailView {
+  .navWrapper {
+    transform: translateX(-100%);
+  }
+  .slidePageContainer {
+    .masterView {
+      transform: translateX(-100%);
+    }
+    .detailView {
+      transform: translateX(0);
+    }
+  }
+}
+
+// ****************************************
+// Page and Partial specific modifications
+// ****************************************
+
+// navigation
+@import "components/navigationDropdown";
+
+// pages
+#eventsContainer {
+  &.hasNoSelectedProcess #processViewWrapper {
+    display: block;
+  }
+  .nothingSelectedMessage {
+    display: none;
+  }
+}

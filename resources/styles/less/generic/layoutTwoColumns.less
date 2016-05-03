@@ -1,0 +1,100 @@
+// *********************
+// Two Column Layout
+// Overwrite styles from off canvas layout
+// *********************
+#main {
+  position: relative;
+  overflow: hidden; // hide off canvas boxes
+  //  max-height: 100%;
+  top: 0;
+}
+
+.slidePageContainer {
+  .masterView,
+  .detailView {
+    // off-canvas design
+    display: block;
+    float: left;
+    // 2 column design
+    width: 50%;
+    transform: translateX(0);
+    .resetPositionStyles;
+    .scrollWrapper {
+      .resetPositionStyles;
+    }
+  }
+  .masterView {
+    z-index: 2;
+    transform: translateX(0);
+  }
+  .detailView {
+    // hide behind masterView
+    z-index: 1;
+    transform: translateX(0);//-100%
+  }
+}
+
+html.showDetailView {
+  .navWrapper {
+    transform: translateX(0);
+  }
+  .slidePageContainer {
+    .masterView {
+      transform: translateX(0);
+    }
+    .detailView {
+      // slide in to default position
+      transform: translateX(0);
+    }
+  }
+}
+
+// ****************************************
+// Page and Partial specific modifications
+// ****************************************
+#processListWrapper,
+#eventsContainer {
+  #processViewWrapper {
+    float: left;
+    // 2 column design
+    width: 50%;
+  }
+  .detailView {
+    height: 100%;
+  }
+}
+
+#mapContainer {
+  .masterView {
+    float: left;
+    width: 30%;
+  }
+  .detailView {
+    float: left;
+    width: 70%;
+  }
+  iframe {
+    padding: @table-padding;
+    top: 0;
+  }
+}
+
+#loggingContainer {
+  .masterView {
+    float: left;
+    width: 30%;
+  }
+  .detailView {
+    float: left;
+    width: 70%;
+  }
+}
+
+.naviBack {
+  display: none;
+}
+
+@media (min-width: 900px ) {
+  // navigation
+@import "components/navigationBar";
+}

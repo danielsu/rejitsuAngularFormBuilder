@@ -1,0 +1,64 @@
+table {
+  table-layout: fixed;
+  width: 100%; // combined with table-layout: fixed; it uses parents 100% instead increasing automatically
+  background-color: @color-list-bg;
+
+  thead{
+    background-color: @color-list-header;
+  }
+}
+tr {
+  // use border as margin does not work
+  // border: 3px solid @color-list-hover;
+  border-bottom: 1px solid @color-list-border; // immitate border in tr
+  list-style: none;
+  transition: background-color @transition-time-very-fast ease;
+  cursor: pointer;
+
+}
+td {
+  padding: @table-padding (0.5 * @table-padding);
+}
+tbody tr{
+  &.isActive {
+    background-color: @color-list-active;
+  }
+}
+
+// sort icons, up = :after, down = :before
+thead .sortIcon {
+  color: lighten(@font-color-default, 70%);
+  &:before {
+    .fa;
+    position: relative;
+    content: '\f0de'; // fa-sort-desc up
+  }
+  &:after {
+    .fa;
+    position: relative;
+    left: -0.6em;
+    content: '\f0dd'; // fa-sort-asc down
+  }
+
+  &.activeOrderByCriteria:not(.reverseSort):before {
+    color: @font-color-default;
+  }
+  &.activeOrderByCriteria.reverseSort:after {
+    color: @font-color-default;
+  }
+}
+
+html.no-touch{
+  thead .sortIcon{
+    &:hover:after,
+    &:hover:before {
+      color: @font-color-default;
+    }
+  }
+
+  tbody tr {
+    &:hover {
+      background-color: @color-list-hover;
+    }
+  }
+}

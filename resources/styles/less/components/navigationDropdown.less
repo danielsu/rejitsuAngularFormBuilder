@@ -1,0 +1,45 @@
+.navWrapper {
+  .dropdown-menu {
+    display: block;
+    left: -300px;
+    transition: left linear @transition-time-fast;
+  }
+  .dropdown.open .dropdown-menu {
+    left: -10px;
+    padding-left: 15px;
+  }
+
+  .nav-toggle:before {
+    .fa;
+    color: white;
+    font-size: 1.5em;
+    content: '\f0c9'; // fa-bars
+    position: absolute;
+    top: -0.2em;
+    left: 0.2em;
+  }
+
+  // overpower bootstrap
+  .dropdown-menu>li>a {
+    line-height: 2.5rem;
+    &.isActive,
+    &:active,
+    &:hover {
+      border: none;
+    }
+  }
+
+  li .fa {
+    // indentation of icons and text
+    padding-right: 1em;
+  }
+
+  nav,
+  .dropdown,
+  #activeMenuItem {
+    //    display: inline;
+  }
+  #activeMenuItem {
+    margin-left: 3em;
+  }
+}

@@ -1,0 +1,242 @@
+// *******************************************************
+// $processList
+// *******************************************************
+.processList {
+  table {
+    table-layout: fixed;
+    width: 100%; // combined with table-layout: fixed; it uses parents 100% instead increasing automatically
+    background-color: @color-list-bg;
+
+    thead {
+      color: @font-color-list-header;
+      background-color: @color-list-header;
+    }
+  }
+
+  tr {
+    // use border as margin does not work
+    // border: 3px solid @color-list-hover;
+    border-bottom: 1px solid @color-list-border; // immitate border in tr
+    list-style: none;
+    transition: background-color @transition-time-very-fast ease;
+    cursor: pointer;
+
+  }
+
+  td {
+    padding: @table-padding (0.5 * @table-padding);
+  }
+
+  tbody tr {
+    &.isActive {
+      background-color: @color-list-active;
+    }
+  }
+
+  // sort icons, up = :after, down = :before
+  thead .sortIcon {
+    color: lighten(@font-color-list-header, 70%);
+    position: relative;
+
+    &:before {
+      .fa;
+      .noTextOutline;
+      position: absolute;
+      content: '\f0de'; // fa-sort-desc up
+    }
+    &:after {
+      .fa;
+      .noTextOutline;
+      position: absolute;
+      content: '\f0dd'; // fa-sort-asc down
+      left: 0.1em;
+    }
+
+    &.activeOrderByCriteria:not(.reverseSort):before {
+      color: @font-color-list-header;
+    }
+    &.activeOrderByCriteria.reverseSort:after {
+      color: @font-color-list-header;
+    }
+  }
+
+  height: 100%;
+  transition: height @transition-time-fast ease;
+  .gutter-background;
+
+  tr.isUnread {
+    font-weight: bold;
+  }
+  tr.done {
+    //    background: rgba(0,0,0,0.1);
+  }
+
+  td.state,
+  td.selectProcess {
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  thead .state i {
+    font-size: 1em;
+    min-width: 1.5em;
+  }
+
+  .description {
+    .cutOffText;
+  }
+
+  .selectProcess i:before {
+    .fa;
+    color: @font-color-default;
+    content: "\f054"; // fa-chevron-right
+  }
+
+  a {
+    display: block;
+    color: @font-color-default;
+  }
+
+  h1 {
+    margin: 0.5em 0;
+    line-height: @navigation-height-small;
+    text-transform: uppercase;
+  }
+
+  .disabled {
+    background-color: red;
+  }
+
+  .state {
+    .rejitsuState i {
+      font-size: 1rem;
+      opacity: 0.5;
+      transition: opacity ease @transition-time-medium;
+
+      &.statusStepDone {
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+/******************************************
+* VIEW 1) with smallest width, is default due to mobile first
+******************************************/
+.processList {
+  //  border: 3px solid @color-breakpoint1;
+
+  thead {
+    display: none;
+  }
+  tbody {
+
+    .state,
+    .device,
+    .date,
+    .description {
+      // show these columns as kind of rows inline of one TR
+      display: inline-block;
+      width: 50%;
+    }
+    .device {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .date {
+      padding-top: 0.5em;
+      padding-bottom: 0;
+    }
+    .description {
+      padding-top: 0;
+      padding-bottom: 0.5em;
+    }
+    .selectProcess {
+      width: 3rem;
+    }
+
+    .rejitsuState{
+      display: inline-block;
+    }
+  }
+}
+
+/*******************************************
+* VIEW 2) for medium width.
+*******************************************/
+.processList.mediumView {
+  //  border: 3px solid @color-breakpoint2;
+  thead {
+    display: none;
+  }
+  tbody {
+    .state,
+    .device,
+    .date,
+    .description {
+      // show these 2 columns as 2 kind of rows inline of one TR
+      display: inline-block;
+      width: 50%;
+    }
+    .device {
+      padding-top: 0.5em;
+    }
+    .date {
+      padding-right: 0.5em;
+    }
+    .description {
+//      width: 100%; // % of available block width
+      padding-top: 0;
+      padding-right: 0.5em;
+    }
+    .selectProcess {
+      cursor: pointer;
+      width: 3rem;
+    }
+  }
+}
+
+/*******************************************
+* VIEW 3) large view as expanded table with real column for each column.
+* in case of medium AND large views set, use large one
+*******************************************/
+.processList.largeView.mediumView,
+.processList.largeView {
+  //  border: 3px solid @color-breakpoint3;
+  thead {
+    display: table-header-group;
+  }
+
+  .state,
+  .device,
+  .description,
+  .date {
+    display: table-cell;
+  }
+
+  .state {
+    width: 25%;
+  }
+  .device {
+    width: 20%;
+  }
+  .description {
+    width: auto;
+  }
+  .date {
+    width: 100px;
+  }
+  .selectProcess {
+    display: none;
+  }
+  thead td {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    line-height: 2em;
+  }
+  .scrollWrapper {
+    // escape string: less compiler should not evaluate this expression
+    height: ~"calc( 100% - 3em )";
+  }
+}

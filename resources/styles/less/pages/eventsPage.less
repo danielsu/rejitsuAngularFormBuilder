@@ -1,0 +1,53 @@
+// *********************
+// Events Page
+// *********************
+
+#eventsContainer {
+  .nothingEventsAvailableMessage,
+  .loadingDataMessage {
+    color: fade(@font-color-default, 30);
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    .gutter-background;
+    // display: table-cell; // to be defined below
+    // hide messages by default
+    display: none;
+  }
+
+  &.connectingToServer,
+  &.hasNoEventsAvailable {
+    #processListWrapper {
+      display: table;
+    }
+    .processList {
+      display: none;
+    }
+  }
+  // no events: show message
+  &.hasNoEventsAvailable {
+    .nothingEventsAvailableMessage {
+      display: table-cell; // show up
+    }
+  }
+
+  // still connecting: show connecting message
+  &.connectingToServer {
+    .loadingDataMessage {
+      display: table-cell; // show up
+      height: 6em;
+      i.loading {
+        width: 100%;
+        height: 2em;
+        display: inline-block;
+      }
+    }
+    // no results found while connecting does not make sense,
+    // but show only connecting messag
+    &.hasNoEventsAvailable {
+      .nothingEventsAvailableMessage {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+// **********************************
+// Variables
+// **********************************
+@break-smartphone: 600px;
+// Content First will break here instead of iPhone width
+
+@color-breakpoint1: #9dc447;
+@color-breakpoint2: #efc236;
+@color-breakpoint3: #97000b;
+
+@color-primary: rgb(240, 234, 201);
+//@color-secondary: rgb(67, 133, 142);
+@color-secondary: rgb(150, 00, 10);
+@color-ternary: rgb(17, 101, 140);
+
+@navigation-height-small: 30px;
+@navigation-height-medium: 50px;
+@navigation-color: @color-primary;
+@navigation-color-hover: white;
+@navigation-color-selected: white;
+@navigation-bg-color: @color-secondary;
+@navigation-bg-color-selected: darken(@color-secondary, 10%);
+@navigation-separation-color: darken(@navigation-bg-color, 10%);
+
+@transition-time-slow: 2s;
+@transition-time-medium: 0.6s;
+@transition-time-fast: 0.3s;
+@transition-time-very-fast: 0.15s;
+
+@color-state-info: fade(blue, 70%);
+@color-state-warn: fade(orange, 70%);
+@color-state-error: fade(red, 70%);
+@color-state-check: fade(green, 70%);
+
+@color-app-bg: white;
+@color-list-bg: @color-primary;
+@color-list-header: @navigation-separation-color;
+@color-list-active: white;
+@color-list-hover: white;
+@color-list-border: #fafafa;
+@color-list-separation: rgb(140, 140, 140);
+
+// detail view has inverted colors from list
+@color-process-view-bg: @color-list-active;
+@color-task-bg: @color-list-bg;
+@color-task-border: none;
+
+@table-padding: 0.5rem;
+@font-size-default: 12pt;
+@font-color-default: black;
+@font-color-list-header: @navigation-color-hover;
+@font-color-default-inverted: white;
+@font-color-todo: #c3c3c3;

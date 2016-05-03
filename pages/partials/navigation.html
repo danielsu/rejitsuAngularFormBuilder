@@ -1,0 +1,16 @@
+<div class="navWrapper">
+    <nav>
+        <div class="dropdown">
+            <a data-toggle="dropdown" href="" class="nav-toggle"></a>
+            <ul class="dropdown-menu" role="menu">
+                <li ng-class="{'isActive' : selectedPage == 'dynaFormExamples'}">
+                    <a href="#/dynaFormExamples"><i class="fa fa-edit"></i> Form Builder Demo </a>
+                </li>
+                <li ng-class="{'isActive' : selectedPage == 'dynaFormDocu'}">
+                    <a href="#/dynaFormDocu"><i class="fa fa-edit"></i> Form Schema Reference</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="activeMenuItem">{{ NAVI_NAMES[selectedPage] }}</div>
+</div>

@@ -1,0 +1,50 @@
+// *********************
+// Logging Page
+// *********************
+#loggingContainer {
+  #deviceTableWrapper {
+    .gutter-background;
+    li:after{
+      .fa;
+      color: @font-color-default;
+      content: "\f054"; // fa-chevron-right
+      position: absolute;
+      right: 1em;
+    }
+  }
+  #diagram {
+    height: 100%;
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+      display: none;
+    }
+
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+    }
+
+    &.noData {
+      .centerWrapper;
+      .canvas {
+        display: none;
+      }
+      .noDataHint {
+        .centered;
+      }
+    }
+  }
+  .deviceName{
+    font-weight: bold;
+  }
+  .deviceId{
+  }
+}

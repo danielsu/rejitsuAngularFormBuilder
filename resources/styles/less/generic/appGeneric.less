@@ -1,0 +1,250 @@
+// **********************************
+// $mixins
+// **********************************
+.fa {
+  font-family: "FontAwesome";
+}
+
+.colorTransition {
+  transition: color ease 1s;
+  transition: background-color ease 1s;
+}
+
+// **********************************
+// Debug
+// **********************************
+.todo {
+  color: @font-color-todo;
+  cursor: default;
+  pointer-events: none;
+}
+
+.debugBox{
+  width: 100%;
+  margin-top: 4em;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: darken(@color-primary, 10%);
+  word-wrap: break-word;
+}
+
+// **********************************
+// More Normalization
+// **********************************
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+a {
+  &,
+  &:hover,
+  &:active,
+  &:visited {
+    color: @font-color-default;
+    text-decoration: none;
+  }
+}
+
+html {
+  font-size: @font-size-default;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+legend{
+  border: none;
+}
+// **********************************
+// Common Styles
+// **********************************
+
+html,
+body {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+ng-view {
+  position: absolute;
+  padding-top: @navigation-height-medium;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slidePageContainer {
+  height: 100%;
+  max-height: 100%;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+// customize bootstrap styles
+.container-fluid {
+  padding: 0;
+}
+
+.navWrapper,
+.masterView,
+.detailView {
+  transition: transform @transition-time-medium ease;
+  transform: translateX(0);
+}
+
+.state {
+  i {
+    font-size: 1.5rem;
+    .fa;
+    &:before {
+      .textOutline;
+    }
+    &.info:before {
+      content: "\f05a"; // fa-info-circle
+      color: @color-state-info;
+
+      .isUnread & {
+        // change nesting via ... &
+        color: fadein(@color-state-info, 20%);
+      }
+    }
+    &.active:before,
+    &.warning:before {
+      content: "\f071"; // fa-exclamation-triangle
+      color: @color-state-warn;
+      .isUnread & {
+        // change nesting via ... &
+        color: fadein(@color-state-warn, 20%);
+      }
+    }
+    &.error:before {
+      content: "\f05e"; // fa-ban
+      color: @color-state-error;
+      .isUnread & {
+        // change nesting via ... &
+        color: fadein(@color-state-error, 20%);
+      }
+    }
+    &.done:before,
+    &.check:before {
+      content: "\f00c"; // fa-check
+      color: @color-state-check;
+      .isUnread & {
+        // change nesting via ... &
+        color: fadein(@color-state-check, 20%);
+      }
+    }
+  }
+}
+
+.cutOffText {
+  //  display: block; //to be set at different selector
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.colorTransition {
+  transition: color ease 1s;
+  transition: background-color ease 1s;
+}
+
+.textOutline {
+  text-shadow: 1px 1px 0px white, 1px -1px 0px white, -1px 1px 0px white, -1px -1px 0px white;
+}
+
+.noTextOutline {
+  text-shadow: none;
+}
+
+body {
+  position: relative;
+  background-color: @color-app-bg;
+}
+
+.masterView{
+  background-color: @color-primary;
+}
+.hideScrollbars {
+  overflow: hidden;
+}
+
+.scrollWrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.gutter-background {
+  background: url("../images/gutter.gif") repeat;
+}
+
+.centerWrapper {
+  display: table;
+}
+
+.centered {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.loading {
+  background: url("../images/loading_spinner.gif") no-repeat;
+  background-position: 50% 50%;
+}
+
+.resetPositionStyles {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  padding: 0;
+}
+
+.absoluteFullscreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.absoluteBelowNavigation {
+  .absoluteFullscreen;
+  padding-top: @navigation-height-medium;
+}
+
+.fader {
+  transition: opacity linear @transition-time-medium;
+  display: block !important; /* for NG to not hide element instantly */
+  opacity: 1;
+
+  &:ng-show {
+    opacity: 1;
+  }
+
+  &.ng-hide {
+    opacity: 0;
+  }
+}

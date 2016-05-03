@@ -1,0 +1,73 @@
+// **********************************
+// $processView
+// **********************************
+#processView {
+  //  height: 100%;
+  background-color: @color-process-view-bg;
+  padding-left: @table-padding;
+  padding-top: @table-padding;
+  padding-right: @table-padding;
+
+  .state {
+    float: left;
+    height: 3.5em;
+    line-height: 3.5em;
+    padding: @table-padding;
+    margin-right: @table-padding;
+  }
+
+  .id {
+    padding-top: @table-padding;
+    font-weight: bold;
+  }
+  .deviceName {
+    font-weight: bold;
+  }
+  .device {
+  }
+  .date {
+  }
+
+  .descriptionWrapper {
+  }
+  .description {
+    resize: none;
+    width: 100%;
+    border: none;
+    padding: 1em 0;
+  }
+
+  .rejitsuState {
+    font-size: 2rem;
+    float: right;
+    transition: opacity ease @transition-time-medium;
+
+    .statusStepDone {
+      opacity: 1;
+    }
+    :not(.statusStepDone) {
+      opacity: 0.5;
+    }
+  }
+}
+
+#eventsContainer.hasNoSelectedProcess {
+  #processViewWrapper {
+    display: table;
+  }
+  #processView {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  &.hasNoEventsAvailable {
+    .nothingSelectedMessage {
+      display: none;
+    }
+  }
+}
+
+.nothingSelectedMessage {
+  color: fade(@font-color-default, 30);
+}

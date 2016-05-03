@@ -1,0 +1,110 @@
+<div class="scrollWrapper widgetDemoPage">
+    <h2>Form Schema Reference / Documentation</h2>
+    <pre class="prettyprint widgetDescription fullWidth anyHeight">
+#################################
+# Form Schema Reference
+#################################
+This schema can be used to define lightweight, full featured, complex forms,
+which can be rendered by any client side technology, e.g. HTML5, Java Swing, Adobe Flash etc.
+Features include simple to use, user interaction support, single field validation, form validation with business logic, extendable.
+
+#################
+# Top Level Form Details
+#################
+
+(x) formName: form name, prefix for HTML field IDs [formName]_[fieldName], needed for storage variable of ng-model, too
+(x) groups: (optional) [] Array of fields (may contain nested groups, see below)
+(x) fields: [] Array of field elements or groups with fields
+
+Storage of ng-model data: 'formData'+[formName].[fieldName], eg. formName = 'myForm', input = 'surname', model => 'formDatamyForm.surname'
+
+#################
+# Fields
+#################
+name (Pflicht, muss für das Mapping der BPM Task-Variable gleichen, erhält beim Transfer an die BPM das Präfix map_[name])
+
+####
+# optional attributes: (x) = implemented, (-) = todo
+####
+type [ (no type given (default) = text) |
+    (x) checkbox (single chechbox or multiple if options-attribute is used)|
+    (-) color |
+    (-) date |
+    (-) datetime |
+    (-) datetime-local |
+    (-) email |
+    (-) month |
+    (-) number |
+    (x) radio (use options-attribute) |
+    (-) range |
+    (-) search |
+    (x) select (use options-attribute) |
+    (-) tel |
+    (x) text (default) |
+    (-) time |
+    (-) url |
+    (-) week ]
+
+    # special types
+    # (x) textarea (use rows-attribute)
+    # (-) button
+    # (x) submit  calls function given via directive with fn(Object:formDataObject, boolean:isFormValid)
+    # (-) pattern (with pattern and hint / explanation)
+
+(x) id (if not give use lower case [formname]_[name])
+(x) label (if not given use [name])
+(x) required [true | false (default)]
+(-) disabled [ not implemented yet, rather done via addAttributes with ng-disable]
+(x) readonly [true | false (default)]
+(x) placeholder (text for empty fields)
+(x) help (text for tooltips)
+(x) addAttributes (specific, string containing any well defined HTML-Attributen, e.g. HTML5 or AngularJS, inserted 1:1)
+(x) rows [number for text area only]
+(x) showWhen [string, to be set on surrounding div of label and field]
+(x) options (for types radio, checkbox and select, array [] with simple strings oder key-value objects)
+
+#################
+# options Details
+#################
+Array with simple strings, e.g.. ['red', 'green', 'blue'], Attention: Given Text will be transfered as value and is URL encoded, whitespace = %20
+Array with key-value objects [{ label:'[string]', value:'[string | number]'}]
+e.g. Favorite vacation destination = [{label:'Beach and Sea', value:'beach'},{label:'Mountains for walking and climbing', value:'mountains'},{label:'Big City Adventure', value:'city'}]
+
+#################
+# showWhen Details
+#################
+String as expression, e.g. angular expression showWhen: 'formDatademoForm.checkboxShowMore==true'
+model storage name: 'formData'+[formName].[fieldName]
+
+#################
+# Output
+#################
+(x) Output order according to appearance in JSON
+(x) show empty groups
+(x) show error message for empty groups and empty form
+
+#################
+# Group Details
+#################
+groupName (mandatory)
+groupLabel (optional, handling like with input types)
+fields: [] array of fields or nested groups
+
+
+BUG
+_ BPMN Process task does not handle all params
+
+TO DO
+v ngModel
+v form definition to be first entry
+v get all single field values
+_ get all multi field values, e.g. multiple options as in checkboxes, select ...
+_ HOW TO handle multi selection server side?
+_ do ngModel multi selection on checkboxes?
+v do URL encode all values
+_ do server side content map
+_ do buttons and actions
+_ do check ID are unique or is same ID used more than once
+_ BPMN set rejitsuState = new when starting
+    </pre>
+</div>

@@ -1,0 +1,132 @@
+.widgetDemoPage{
+  background-color: @color-list-bg;
+
+  h2{
+    margin: 1%;
+    font-size: 130%;
+  }
+
+  .widget{
+    display: inline-block;
+    margin: 1%;
+    width: 47%;
+
+    // to fix what prettify mixes up
+    vertical-align: top;
+  }
+  .widgetDescription{
+    display: inline-block;
+    margin: 1%;
+    width: 47%;
+    max-height: 600px;
+    overflow: auto;
+
+    &.fullWidth{
+      width: 98%;
+    }
+    &.anyHeight{
+      max-height: none;
+    }
+  }
+
+  img{
+    width: 30%;
+    margin-left: 2em;
+    margin-bottom: 3em;
+    border: 1em solid white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  }
+}
+
+.widget {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  margin: 2em 0.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+
+  form>.checkbox,
+  form>.form-group{
+      clear: both
+  }
+
+  fieldset{
+    border: 1px solid black;
+    padding: 0.5em;
+    width: 48%;
+    margin: 0 1%;
+    float: left;
+  }
+  legend{
+    text-align: center;
+    font-size: 1em;
+    padding: 0 0.5em;
+    width: auto;
+    margin: 0;
+  }
+  :not(td).error{
+    color: @color-state-error;
+  }
+  :not(td).warning{
+    color: @color-state-warn;
+  }
+}
+.floatLeft{
+  float: left;
+  width: auto;
+}
+.width6-12{
+  width: 50%;
+}
+.complexTable {
+  thead {
+    color: white;
+    font-weight: bold;
+  }
+  td {
+    vertical-align: top;
+    padding-right: 1em;
+  }
+  .deviceID,
+  .deviceType,
+    //  .errorSeverity,
+    //  .errorCode,
+  .errorInfo {
+    display: block;
+  }
+  .errorSeverity:before {
+    content: ' / ';
+  }
+}
+
+//************************
+.contactWidget {
+  display: inline-block;
+
+  &>span {
+    display: block;
+  }
+  .zipCode,
+  .city {
+    display: inline-block;
+  }
+}
+
+.sticker{
+  background: white;
+  padding: 1em 3em;
+  position: absolute;
+//  right: -6em;
+//  top: 2em;
+  bottom: 0.5em;
+  left: 0.5em;
+  z-index: 2000;
+  opacity: 0.8;
+//  transform: rotate(45deg);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+
+  transition: opacity @transition-time-fast ease;
+  &:hover{
+    opacity: 1;
+  }
+}

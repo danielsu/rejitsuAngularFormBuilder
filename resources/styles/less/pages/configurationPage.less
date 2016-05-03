@@ -1,0 +1,55 @@
+// *********************
+// Configuration Page
+// *********************
+#configurationContainer {
+  .row {
+    margin: 0;
+  }
+  h1.row {
+    background-color: @color-list-bg;
+    padding: @table-padding (0.5 * @table-padding);
+  }
+
+  #rulesContainer,
+  #processContainer,
+  #appConfigContainer {
+    .tableWrapper{
+     padding-left: 0;
+     padding-right: 0;
+    }
+    width: 100%;
+    min-height: 33%;
+    overflow: hidden;
+
+    .details {
+      padding-left: @table-padding;
+      padding-top: @table-padding;
+    }
+    .ruleData,
+    .ruleWording {
+      display: block;
+    }
+    .ruleData {
+      font-weight: normal;
+      padding-left: 3 * @table-padding;
+    }
+    .ruleWording {
+      font-weight: bold;
+    }
+  }
+  #rulesContainer {
+    border-bottom: 2px @color-list-border solid;
+    .details {
+      height: 100%;
+    }
+  }
+
+  #processContainer {
+    .details {
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}

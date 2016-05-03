@@ -1,0 +1,22 @@
+.dataListing {
+  li {
+    padding: @table-padding;
+    line-height: 2rem;
+    background-color: @color-list-bg;
+    border-bottom: 1px solid @color-list-border;
+    cursor: pointer;
+  }
+  &.noHover li {
+    background-color: @color-list-active;
+  }
+
+}
+
+html.no-touch .dataListing {
+  li.isActive {
+    background-color: @color-list-active;
+  }
+  &:not(.noHover) li:hover {
+    background-color: @color-list-hover;
+  }
+}

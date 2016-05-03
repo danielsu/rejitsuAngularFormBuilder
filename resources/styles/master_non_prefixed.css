@@ -1,0 +1,1131 @@
+.fa {
+  font-family: "FontAwesome";
+}
+.colorTransition {
+  transition: color ease 1s;
+  transition: background-color ease 1s;
+}
+.todo {
+  color: #c3c3c3;
+  cursor: default;
+  pointer-events: none;
+}
+.debugBox {
+  width: 100%;
+  margin-top: 4em;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: #e5daa1;
+  word-wrap: break-word;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+html {
+  font-size: 12pt;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+legend {
+  border: none;
+}
+html,
+body {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+ng-view {
+  position: absolute;
+  padding-top: 50px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.slidePageContainer {
+  height: 100%;
+  max-height: 100%;
+}
+.fullHeight {
+  height: 100%;
+}
+.container-fluid {
+  padding: 0;
+}
+.navWrapper,
+.masterView,
+.detailView {
+  transition: transform 0.6s ease;
+  transform: translateX(0);
+}
+.state i {
+  font-size: 1.5rem;
+  font-family: "FontAwesome";
+}
+.state i:before {
+  text-shadow: 1px 1px 0px #ffffff, 1px -1px 0px #ffffff, -1px 1px 0px #ffffff, -1px -1px 0px #ffffff;
+}
+.state i.info:before {
+  content: "\f05a";
+  color: rgba(0, 0, 255, 0.7);
+}
+.isUnread .state i.info:before {
+  color: rgba(0, 0, 255, 0.9);
+}
+.state i.active:before,
+.state i.warning:before {
+  content: "\f071";
+  color: rgba(255, 165, 0, 0.7);
+}
+.isUnread .state i.active:before,
+.isUnread .state i.warning:before {
+  color: rgba(255, 165, 0, 0.9);
+}
+.state i.error:before {
+  content: "\f05e";
+  color: rgba(255, 0, 0, 0.7);
+}
+.isUnread .state i.error:before {
+  color: rgba(255, 0, 0, 0.9);
+}
+.state i.done:before,
+.state i.check:before {
+  content: "\f00c";
+  color: rgba(0, 128, 0, 0.7);
+}
+.isUnread .state i.done:before,
+.isUnread .state i.check:before {
+  color: rgba(0, 128, 0, 0.9);
+}
+.cutOffText {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.colorTransition {
+  transition: color ease 1s;
+  transition: background-color ease 1s;
+}
+.textOutline {
+  text-shadow: 1px 1px 0px #ffffff, 1px -1px 0px #ffffff, -1px 1px 0px #ffffff, -1px -1px 0px #ffffff;
+}
+.noTextOutline {
+  text-shadow: none;
+}
+body {
+  position: relative;
+  background-color: #ffffff;
+}
+.masterView {
+  background-color: #f0eac9;
+}
+.hideScrollbars {
+  overflow: hidden;
+}
+.scrollWrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+.gutter-background {
+  background: url("../images/gutter.gif") repeat;
+}
+.centerWrapper {
+  display: table;
+}
+.centered {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.loading {
+  background: url("../images/loading_spinner.gif") no-repeat;
+  background-position: 50% 50%;
+}
+.resetPositionStyles {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  padding: 0;
+}
+.absoluteFullscreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.absoluteBelowNavigation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 50px;
+}
+.fader {
+  transition: opacity linear 0.6s;
+  display: block !important;
+  /* for NG to not hide element instantly */
+  opacity: 1;
+}
+.fader:ng-show {
+  opacity: 1;
+}
+.fader.ng-hide {
+  opacity: 0;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  background-color: #f0eac9;
+}
+table thead {
+  background-color: #630007;
+}
+tr {
+  border-bottom: 1px solid #fafafa;
+  list-style: none;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+td {
+  padding: 0.5rem 0.25rem;
+}
+tbody tr.isActive {
+  background-color: #ffffff;
+}
+thead .sortIcon {
+  color: #b3b3b3;
+}
+thead .sortIcon:before {
+  font-family: "FontAwesome";
+  position: relative;
+  content: '\f0de';
+}
+thead .sortIcon:after {
+  font-family: "FontAwesome";
+  position: relative;
+  left: -0.6em;
+  content: '\f0dd';
+}
+thead .sortIcon.activeOrderByCriteria:not(.reverseSort):before {
+  color: #000000;
+}
+thead .sortIcon.activeOrderByCriteria.reverseSort:after {
+  color: #000000;
+}
+html.no-touch thead .sortIcon:hover:after,
+html.no-touch thead .sortIcon:hover:before {
+  color: #000000;
+}
+html.no-touch tbody tr:hover {
+  background-color: #ffffff;
+}
+.dataListing li {
+  padding: 0.5rem;
+  line-height: 2rem;
+  background-color: #f0eac9;
+  border-bottom: 1px solid #fafafa;
+  cursor: pointer;
+}
+.dataListing.noHover li {
+  background-color: #ffffff;
+}
+html.no-touch .dataListing li.isActive {
+  background-color: #ffffff;
+}
+html.no-touch .dataListing:not(.noHover) li:hover {
+  background-color: #ffffff;
+}
+#main {
+  position: relative;
+  overflow: hidden;
+  top: 0;
+}
+.slidePageContainer .masterView,
+.slidePageContainer .detailView {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.slidePageContainer .masterView {
+  transform: translateX(0);
+}
+.slidePageContainer .detailView {
+  transform: translateX(100%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 50px;
+}
+.slidePageContainer .detailView .scrollWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 50px;
+  height: auto;
+}
+html.showDetailView .navWrapper {
+  transform: translateX(-100%);
+}
+html.showDetailView .slidePageContainer .masterView {
+  transform: translateX(-100%);
+}
+html.showDetailView .slidePageContainer .detailView {
+  transform: translateX(0);
+}
+.navWrapper .dropdown-menu {
+  display: block;
+  left: -300px;
+  transition: left linear 0.3s;
+}
+.navWrapper .dropdown.open .dropdown-menu {
+  left: -10px;
+  padding-left: 15px;
+}
+.navWrapper .nav-toggle:before {
+  font-family: "FontAwesome";
+  color: white;
+  font-size: 1.5em;
+  content: '\f0c9';
+  position: absolute;
+  top: -0.2em;
+  left: 0.2em;
+}
+.navWrapper .dropdown-menu > li > a {
+  line-height: 2.5rem;
+}
+.navWrapper .dropdown-menu > li > a.isActive,
+.navWrapper .dropdown-menu > li > a:active,
+.navWrapper .dropdown-menu > li > a:hover {
+  border: none;
+}
+.navWrapper li .fa {
+  padding-right: 1em;
+}
+.navWrapper #activeMenuItem {
+  margin-left: 3em;
+}
+#eventsContainer.hasNoSelectedProcess #processViewWrapper {
+  display: block;
+}
+#eventsContainer .nothingSelectedMessage {
+  display: none;
+}
+#mapContainer .masterView {
+  background: url("../images/gutter.gif") repeat;
+}
+#mapContainer .masterView li:after {
+  font-family: "FontAwesome";
+  color: #000000;
+  content: "\f054";
+  position: absolute;
+  right: 1em;
+}
+#mapContainer .detailView {
+  background: url("../images/loading_spinner.gif") no-repeat;
+  background-position: 50% 50%;
+  height: 100%;
+}
+#mapContainer .detailView iframe {
+  height: 100%;
+  width: 100%;
+}
+#mapContainer .deviceName {
+  font-weight: bold;
+}
+#loggingContainer #deviceTableWrapper {
+  background: url("../images/gutter.gif") repeat;
+}
+#loggingContainer #deviceTableWrapper li:after {
+  font-family: "FontAwesome";
+  color: #000000;
+  content: "\f054";
+  position: absolute;
+  right: 1em;
+}
+#loggingContainer #diagram {
+  height: 100%;
+}
+#loggingContainer #diagram .axis path,
+#loggingContainer #diagram .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+#loggingContainer #diagram .x.axis path {
+  display: none;
+}
+#loggingContainer #diagram .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+#loggingContainer #diagram.noData {
+  display: table;
+}
+#loggingContainer #diagram.noData .canvas {
+  display: none;
+}
+#loggingContainer #diagram.noData .noDataHint {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+#loggingContainer .deviceName {
+  font-weight: bold;
+}
+#configurationContainer .row {
+  margin: 0;
+}
+#configurationContainer h1.row {
+  background-color: #f0eac9;
+  padding: 0.5rem 0.25rem;
+}
+#configurationContainer #rulesContainer,
+#configurationContainer #processContainer,
+#configurationContainer #appConfigContainer {
+  width: 100%;
+  min-height: 33%;
+  overflow: hidden;
+}
+#configurationContainer #rulesContainer .tableWrapper,
+#configurationContainer #processContainer .tableWrapper,
+#configurationContainer #appConfigContainer .tableWrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+#configurationContainer #rulesContainer .details,
+#configurationContainer #processContainer .details,
+#configurationContainer #appConfigContainer .details {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+}
+#configurationContainer #rulesContainer .ruleData,
+#configurationContainer #processContainer .ruleData,
+#configurationContainer #appConfigContainer .ruleData,
+#configurationContainer #rulesContainer .ruleWording,
+#configurationContainer #processContainer .ruleWording,
+#configurationContainer #appConfigContainer .ruleWording {
+  display: block;
+}
+#configurationContainer #rulesContainer .ruleData,
+#configurationContainer #processContainer .ruleData,
+#configurationContainer #appConfigContainer .ruleData {
+  font-weight: normal;
+  padding-left: 1.5rem;
+}
+#configurationContainer #rulesContainer .ruleWording,
+#configurationContainer #processContainer .ruleWording,
+#configurationContainer #appConfigContainer .ruleWording {
+  font-weight: bold;
+}
+#configurationContainer #rulesContainer {
+  border-bottom: 2px #fafafa solid;
+}
+#configurationContainer #rulesContainer .details {
+  height: 100%;
+}
+#configurationContainer #processContainer .details img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#eventsContainer .nothingEventsAvailableMessage,
+#eventsContainer .loadingDataMessage {
+  color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  background: url("../images/gutter.gif") repeat;
+  display: none;
+}
+#eventsContainer.connectingToServer #processListWrapper,
+#eventsContainer.hasNoEventsAvailable #processListWrapper {
+  display: table;
+}
+#eventsContainer.connectingToServer .processList,
+#eventsContainer.hasNoEventsAvailable .processList {
+  display: none;
+}
+#eventsContainer.hasNoEventsAvailable .nothingEventsAvailableMessage {
+  display: table-cell;
+}
+#eventsContainer.connectingToServer .loadingDataMessage {
+  display: table-cell;
+  height: 6em;
+}
+#eventsContainer.connectingToServer .loadingDataMessage i.loading {
+  width: 100%;
+  height: 2em;
+  display: inline-block;
+}
+#eventsContainer.connectingToServer.hasNoEventsAvailable .nothingEventsAvailableMessage {
+  display: none;
+}
+.navigationCommons {
+  background-color: #96000a;
+  padding: 0.5em;
+  color: #f0eac9;
+  font-size: 1.1rem;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.naviBack {
+  background-color: #96000a;
+  padding: 0.5em;
+  font-size: 1.1rem;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  top: 0;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  color: #f0eac9;
+}
+.naviBack i:before {
+  font-family: "FontAwesome";
+  content: "\f053";
+}
+.naviBack:hover {
+  color: #ffffff;
+}
+.navWrapper {
+  background-color: #96000a;
+  padding: 0.5em;
+  color: #f0eac9;
+  font-size: 1.1rem;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin: 0;
+}
+nav .dropdown-menu {
+  background-color: #96000a;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+nav .dropdown-menu > li > a {
+  padding: 0 0 0.25rem 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: #f0eac9;
+  font-size: 1.1rem;
+}
+nav .dropdown-menu > li > a.isActive,
+nav .dropdown-menu > li > a:active,
+nav .dropdown-menu > li > a:hover {
+  background: none;
+  color: #ffffff;
+}
+nav li {
+  transition: background 0.3s ease;
+}
+nav li.isActive,
+nav li:active,
+nav li:hover {
+  background: #630007;
+}
+.widgetDemoPage {
+  background-color: #f0eac9;
+}
+.widgetDemoPage h2 {
+  margin: 1%;
+  font-size: 130%;
+}
+.widgetDemoPage .widget {
+  display: inline-block;
+  margin: 1%;
+  width: 47%;
+  vertical-align: top;
+}
+.widgetDemoPage .widgetDescription {
+  display: inline-block;
+  margin: 1%;
+  width: 47%;
+  max-height: 600px;
+  overflow: auto;
+}
+.widgetDemoPage .widgetDescription.fullWidth {
+  width: 98%;
+}
+.widgetDemoPage .widgetDescription.anyHeight {
+  max-height: none;
+}
+.widgetDemoPage img {
+  width: 30%;
+  margin-left: 2em;
+  margin-bottom: 3em;
+  border: 1em solid white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.widget {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  margin: 2em 0.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+.widget form > .checkbox,
+.widget form > .form-group {
+  clear: both;
+}
+.widget fieldset {
+  border: 1px solid black;
+  padding: 0.5em;
+  width: 48%;
+  margin: 0 1%;
+  float: left;
+}
+.widget legend {
+  text-align: center;
+  font-size: 1em;
+  padding: 0 0.5em;
+  width: auto;
+  margin: 0;
+}
+.widget :not(td).error {
+  color: rgba(255, 0, 0, 0.7);
+}
+.widget :not(td).warning {
+  color: rgba(255, 165, 0, 0.7);
+}
+.floatLeft {
+  float: left;
+  width: auto;
+}
+.width6-12 {
+  width: 50%;
+}
+.complexTable thead {
+  color: white;
+  font-weight: bold;
+}
+.complexTable td {
+  vertical-align: top;
+  padding-right: 1em;
+}
+.complexTable .deviceID,
+.complexTable .deviceType,
+.complexTable .errorInfo {
+  display: block;
+}
+.complexTable .errorSeverity:before {
+  content: ' / ';
+}
+.contactWidget {
+  display: inline-block;
+}
+.contactWidget > span {
+  display: block;
+}
+.contactWidget .zipCode,
+.contactWidget .city {
+  display: inline-block;
+}
+.sticker {
+  background: white;
+  padding: 1em 3em;
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  z-index: 2000;
+  opacity: 0.8;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+.sticker:hover {
+  opacity: 1;
+}
+.processList {
+  height: 100%;
+  transition: height 0.3s ease;
+  background: url("../images/gutter.gif") repeat;
+}
+.processList table {
+  table-layout: fixed;
+  width: 100%;
+  background-color: #f0eac9;
+}
+.processList table thead {
+  color: #ffffff;
+  background-color: #630007;
+}
+.processList tr {
+  border-bottom: 1px solid #fafafa;
+  list-style: none;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+.processList td {
+  padding: 0.5rem 0.25rem;
+}
+.processList tbody tr.isActive {
+  background-color: #ffffff;
+}
+.processList thead .sortIcon {
+  color: #ffffff;
+  position: relative;
+}
+.processList thead .sortIcon:before {
+  font-family: "FontAwesome";
+  text-shadow: none;
+  position: absolute;
+  content: '\f0de';
+}
+.processList thead .sortIcon:after {
+  font-family: "FontAwesome";
+  text-shadow: none;
+  position: absolute;
+  content: '\f0dd';
+  left: 0.1em;
+}
+.processList thead .sortIcon.activeOrderByCriteria:not(.reverseSort):before {
+  color: #ffffff;
+}
+.processList thead .sortIcon.activeOrderByCriteria.reverseSort:after {
+  color: #ffffff;
+}
+.processList tr.isUnread {
+  font-weight: bold;
+}
+.processList td.state,
+.processList td.selectProcess {
+  text-align: left;
+  vertical-align: middle;
+}
+.processList thead .state i {
+  font-size: 1em;
+  min-width: 1.5em;
+}
+.processList .description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.processList .selectProcess i:before {
+  font-family: "FontAwesome";
+  color: #000000;
+  content: "\f054";
+}
+.processList a {
+  display: block;
+  color: #000000;
+}
+.processList h1 {
+  margin: 0.5em 0;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.processList .disabled {
+  background-color: red;
+}
+.processList .state .rejitsuState i {
+  font-size: 1rem;
+  opacity: 0.5;
+  transition: opacity ease 0.6s;
+}
+.processList .state .rejitsuState i.statusStepDone {
+  opacity: 1;
+}
+/******************************************
+* VIEW 1) with smallest width, is default due to mobile first
+******************************************/
+.processList thead {
+  display: none;
+}
+.processList tbody .state,
+.processList tbody .device,
+.processList tbody .date,
+.processList tbody .description {
+  display: inline-block;
+  width: 50%;
+}
+.processList tbody .device {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.processList tbody .date {
+  padding-top: 0.5em;
+  padding-bottom: 0;
+}
+.processList tbody .description {
+  padding-top: 0;
+  padding-bottom: 0.5em;
+}
+.processList tbody .selectProcess {
+  width: 3rem;
+}
+.processList tbody .rejitsuState {
+  display: inline-block;
+}
+/*******************************************
+* VIEW 2) for medium width.
+*******************************************/
+.processList.mediumView thead {
+  display: none;
+}
+.processList.mediumView tbody .state,
+.processList.mediumView tbody .device,
+.processList.mediumView tbody .date,
+.processList.mediumView tbody .description {
+  display: inline-block;
+  width: 50%;
+}
+.processList.mediumView tbody .device {
+  padding-top: 0.5em;
+}
+.processList.mediumView tbody .date {
+  padding-right: 0.5em;
+}
+.processList.mediumView tbody .description {
+  padding-top: 0;
+  padding-right: 0.5em;
+}
+.processList.mediumView tbody .selectProcess {
+  cursor: pointer;
+  width: 3rem;
+}
+/*******************************************
+* VIEW 3) large view as expanded table with real column for each column.
+* in case of medium AND large views set, use large one
+*******************************************/
+.processList.largeView.mediumView thead,
+.processList.largeView thead {
+  display: table-header-group;
+}
+.processList.largeView.mediumView .state,
+.processList.largeView .state,
+.processList.largeView.mediumView .device,
+.processList.largeView .device,
+.processList.largeView.mediumView .description,
+.processList.largeView .description,
+.processList.largeView.mediumView .date,
+.processList.largeView .date {
+  display: table-cell;
+}
+.processList.largeView.mediumView .state,
+.processList.largeView .state {
+  width: 25%;
+}
+.processList.largeView.mediumView .device,
+.processList.largeView .device {
+  width: 20%;
+}
+.processList.largeView.mediumView .description,
+.processList.largeView .description {
+  width: auto;
+}
+.processList.largeView.mediumView .date,
+.processList.largeView .date {
+  width: 100px;
+}
+.processList.largeView.mediumView .selectProcess,
+.processList.largeView .selectProcess {
+  display: none;
+}
+.processList.largeView.mediumView thead td,
+.processList.largeView thead td {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  line-height: 2em;
+}
+.processList.largeView.mediumView .scrollWrapper,
+.processList.largeView .scrollWrapper {
+  height: calc( 100% - 3em );
+}
+@media (max-width: 23rem) {
+  body {
+    font-size: 80%;
+  }
+}
+#processView {
+  background-color: #ffffff;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+}
+#processView .state {
+  float: left;
+  height: 3.5em;
+  line-height: 3.5em;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+#processView .id {
+  padding-top: 0.5rem;
+  font-weight: bold;
+}
+#processView .deviceName {
+  font-weight: bold;
+}
+#processView .description {
+  resize: none;
+  width: 100%;
+  border: none;
+  padding: 1em 0;
+}
+#processView .rejitsuState {
+  font-size: 2rem;
+  float: right;
+  transition: opacity ease 0.6s;
+}
+#processView .rejitsuState .statusStepDone {
+  opacity: 1;
+}
+#processView .rejitsuState :not(.statusStepDone) {
+  opacity: 0.5;
+}
+#eventsContainer.hasNoSelectedProcess #processViewWrapper {
+  display: table;
+}
+#eventsContainer.hasNoSelectedProcess #processView {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+#eventsContainer.hasNoSelectedProcess.hasNoEventsAvailable .nothingSelectedMessage {
+  display: none;
+}
+.nothingSelectedMessage {
+  color: rgba(0, 0, 0, 0.3);
+}
+.activityBlock {
+  border: 1px solid none;
+  background-color: #f0eac9;
+  margin: 1em 0;
+  height: auto;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.activityBlock.isActive h2:before {
+  transform: rotate(90deg);
+}
+.activityBlock h2 {
+  padding: 0.5em 1em 0.5em 0;
+  margin-left: 2.5em;
+  user-select: none;
+  cursor: pointer;
+  border-top: 0.5em solid #f0eac9;
+  border-bottom: 0.5em solid #f0eac9;
+}
+.activityBlock h2:before {
+  float: left;
+  position: relative;
+  left: -1.5em;
+  transition: transform 0.3s ease;
+  font-family: "FontAwesome";
+  content: "\f054";
+}
+.task {
+  height: 3em;
+}
+.task.done {
+  height: auto;
+}
+.task.done h2:before {
+  content: "\f00c";
+}
+.task .taskContentWrapper {
+  padding: 0.5em 1em 1em 1em;
+}
+.task form > .checkbox,
+.task form > .form-group {
+  clear: both;
+}
+.task fieldset {
+  border: 1px solid black;
+  padding: 0.5em;
+}
+.task legend {
+  text-align: center;
+  font-size: 1em;
+  padding: 0 0.5em;
+  width: auto;
+  margin: 0;
+}
+.task .error,
+.task .warning {
+  color: rgba(255, 165, 0, 0.7);
+}
+.task fieldset {
+  width: 98%;
+  margin: 0 1%;
+  float: none;
+}
+.task.twoColumns fieldset {
+  width: 48%;
+  margin: 0 1%;
+  float: left;
+}
+.taskContentWrapper form {
+  padding: 1em;
+}
+.taskContentWrapper form textarea {
+  width: 100%;
+  height: 10rem;
+  resize: none;
+  margin-top: 0.5rem;
+}
+@media (min-width: 600px) {
+  #main {
+    position: relative;
+    overflow: hidden;
+    top: 0;
+  }
+  .slidePageContainer .masterView,
+  .slidePageContainer .detailView {
+    display: block;
+    float: left;
+    width: 50%;
+    transform: translateX(0);
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    padding: 0;
+  }
+  .slidePageContainer .masterView .scrollWrapper,
+  .slidePageContainer .detailView .scrollWrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    padding: 0;
+  }
+  .slidePageContainer .masterView {
+    z-index: 2;
+    transform: translateX(0);
+  }
+  .slidePageContainer .detailView {
+    z-index: 1;
+    transform: translateX(0);
+  }
+  html.showDetailView .navWrapper {
+    transform: translateX(0);
+  }
+  html.showDetailView .slidePageContainer .masterView {
+    transform: translateX(0);
+  }
+  html.showDetailView .slidePageContainer .detailView {
+    transform: translateX(0);
+  }
+  #processListWrapper #processViewWrapper,
+  #eventsContainer #processViewWrapper {
+    float: left;
+    width: 50%;
+  }
+  #processListWrapper .detailView,
+  #eventsContainer .detailView {
+    height: 100%;
+  }
+  #mapContainer .masterView {
+    float: left;
+    width: 30%;
+  }
+  #mapContainer .detailView {
+    float: left;
+    width: 70%;
+  }
+  #mapContainer iframe {
+    padding: 0.5rem;
+    top: 0;
+  }
+  #loggingContainer .masterView {
+    float: left;
+    width: 30%;
+  }
+  #loggingContainer .detailView {
+    float: left;
+    width: 70%;
+  }
+  .naviBack {
+    display: none;
+  }
+}
+@media (min-width: 600px) and (min-width: 900px) {
+  .navWrapper {
+    padding: 0;
+  }
+  .navWrapper .dropdown-menu {
+    left: 0;
+  }
+  .navWrapper .dropdown-menu > li > a {
+    line-height: 50px;
+    padding-bottom: 0;
+  }
+  .navWrapper li .fa {
+    padding-right: 0.5em;
+  }
+  nav .dropdown-menu {
+    display: block;
+    position: relative;
+    float: none;
+  }
+  nav ul {
+    display: block;
+  }
+  nav li {
+    display: inline-block;
+    margin-left: -4px;
+    /* remove space between inline blocks */
+    padding: 0 0.5rem;
+    border-left: 1px solid #630007;
+  }
+  nav li:first-child {
+    border-left: none;
+  }
+  nav .nav-toggle {
+    display: none;
+  }
+  #activeMenuItem {
+    display: none;
+  }
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22resources%2Fstyles%2Fless%2Fgeneric%2FappGeneric.less%22%2C%22resources%2Fstyles%2Fless%2Fgeneric%2Ftable.less%22%2C%22resources%2Fstyles%2Fless%2Fgeneric%2Flisting.less%22%2C%22resources%2Fstyles%2Fless%2Fgeneric%2FlayoutOffCanvas.less%22%2C%22resources%2Fstyles%2Fless%2Fcomponents%2FnavigationDropdown.less%22%2C%22resources%2Fstyles%2Fless%2Fpages%2FmapPage.less%22%2C%22resources%2Fstyles%2Fless%2Fpages%2FloggingPage.less%22%2C%22resources%2Fstyles%2Fless%2Fpages%2FconfigurationPage.less%22%2C%22resources%2Fstyles%2Fless%2Fpages%2FeventsPage.less%22%2C%22resources%2Fstyles%2Fless%2Fcomponents%2Fnavigation.less%22%2C%22resources%2Fstyles%2Fless%2Fcomponents%2FwidgetCollection.less%22%2C%22resources%2Fstyles%2Fless%2Fcomponents%2FprocessListBasics.less%22%2C%22resources%2Fstyles%2Fless%2Fmaster.less%22%2C%22resources%2Fstyles%2Fless%2Fcomponents%2FprocessView.less%22%2C%22resources%2Fstyles%2Fless%2Fcomponents%2FactivityBlock.less%22%2C%22resources%2Fstyles%2Fless%2Fgeneric%2FlayoutTwoColumns.less%22%2C%22resources%2Fstyles%2Fless%2Fcomponents%2FnavigationBar.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAGA%3BEACE%2CaAAa%2CaAAb%3B%3BAAGF%3BEACE%2CyBAAA%3BEACA%2CoCAAA%3B%3BAAMF%3BEACE%2CcAAA%3BEACA%2CeAAA%3BEACA%2CoBAAA%3B%3BAAGF%3BEACE%2CWAAA%3BEACA%2CeAAA%3BEACA%2CYAAA%3BEACA%2CoBAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAMF%3BEACE%2CSAAA%3BEACA%2CUAAA%3B%3BAAGF%3BEACE%2CgBAAA%3B%3BAAGF%3BEACE%2CkBAAA%3B%3BAAIA%3BAACA%2CCAAC%3BAACD%2CCAAC%3BAACD%2CCAAC%3BEACC%2CcAAA%3BEACA%2CqBAAA%3B%3BAAIJ%3BEACE%2CeAAA%3BEACA%2CaAAa%2C8CAAb%3B%3BAAGF%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BEAClB%2CSAAA%3BEACA%2CUAAA%3BEACA%2CcAAA%3B%3BAAGF%3BEACE%2CYAAA%3B%3BAAMF%3BAACA%3BEACE%2CYAAA%3BEACA%2CgBAAA%3BEACA%2CWAAA%3BEACA%2CeAAA%3BEACA%2CgBAAA%3B%3BAAGF%3BEACE%2CkBAAA%3BEACA%2CiBAAA%3BEACA%2CMAAA%3BEACA%2CSAAA%3BEACA%2COAAA%3BEACA%2CQAAA%3B%3BAAGF%3BEACE%2CYAAA%3BEACA%2CgBAAA%3B%3BAAGF%3BEACE%2CYAAA%3B%3BAAIF%3BEACE%2CUAAA%3B%3BAAGF%3BAACA%3BAACA%3BEACE%2C%2BBAAA%3BEACA%2CWAAW%2CaAAX%3B%3BAAGF%2CMACE%3BEACE%2CiBAAA%3BEA%2FGF%2CaAAa%2CaAAb%3B%3BAAiHE%2CMAHF%2CEAGG%3BEAsDH%2CmGAAA%3B%3BAAnDE%2CMANF%2CEAMG%2CKAAK%3BEACJ%2CSAAS%2COAAT%3BEACA%2C2BAAA%3B%3BAAEA%2CSAAU%2COAVd%2CEAMG%2CKAAK%3BEAMF%2C2BAAA%3B%3BAAGJ%2CMAfF%2CEAeG%2COAAO%3BAACR%2CMAhBF%2CEAgBG%2CQAAQ%3BEACP%2CSAAS%2COAAT%3BEACA%2C6BAAA%3B%3BAACA%2CSAAU%2COAnBd%2CEAeG%2COAAO%3BAAIN%2CSAAU%2COAnBd%2CEAgBG%2CQAAQ%3BEAKL%2C6BAAA%3B%3BAAGJ%2CMAxBF%2CEAwBG%2CMAAM%3BEACL%2CSAAS%2COAAT%3BEACA%2C2BAAA%3B%3BAACA%2CSAAU%2COA3Bd%2CEAwBG%2CMAAM%3BEAKH%2C2BAAA%3B%3BAAGJ%2CMAhCF%2CEAgCG%2CKAAK%3BAACN%2CMAjCF%2CEAiCG%2CMAAM%3BEACL%2CSAAS%2COAAT%3BEACA%2C2BAAA%3B%3BAACA%2CSAAU%2COApCd%2CEAgCG%2CKAAK%3BAAIJ%2CSAAU%2COApCd%2CEAiCG%2CMAAM%3BEAKH%2C2BAAA%3B%3BAAMR%3BEAEE%2CmBAAA%3BEACA%2CuBAAA%3BEACA%2CgBAAA%3B%3BAAGF%3BEACE%2CyBAAA%3BEACA%2CoCAAA%3B%3BAAGF%3BEACE%2CmGAAA%3B%3BAAGF%3BEACE%2CiBAAA%3B%3BAAGF%3BEACE%2CkBAAA%3BEACA%2CyBAAA%3B%3BAAGF%3BEACE%2CyBAAA%3B%3BAAEF%3BEACE%2CgBAAA%3B%3BAAGF%3BEACE%2CkBAAA%3BEACA%2CgBAAA%3BEACA%2CYAAA%3B%3BAAGF%3BEACE%2CgBAAgB%2C8BAAhB%3B%3BAAGF%3BEACE%2CcAAA%3B%3BAAGF%3BEACE%2CmBAAA%3BEACA%2CsBAAA%3BEACA%2CkBAAA%3B%3BAAGF%3BEACE%2CgBAAgB%2C0CAAhB%3BEACA%2C4BAAA%3B%3BAAGF%3BEACE%2CkBAAA%3BEACA%2CSAAA%3BEACA%2CUAAA%3BEACA%2CWAAA%3BEACA%2CYAAA%3BEACA%2CUAAA%3B%3BAAGF%3BEACE%2CkBAAA%3BEACA%2CMAAA%3BEACA%2CSAAA%3BEACA%2CQAAA%3BEACA%2COAAA%3B%3BAAGF%3BEAPE%2CkBAAA%3BEACA%2CMAAA%3BEACA%2CSAAA%3BEACA%2CQAAA%3BEACA%2COAAA%3BEAKA%2CiBAAA%3B%3BAAGF%3BEACE%2C%2BBAAA%3BEACA%2CyBAAA%3B%3BEACA%2CUAAA%3B%3BAAEA%2CMAAC%3BEACC%2CUAAA%3B%3BAAGF%2CMAAC%3BEACC%2CUAAA%3B%3BACvPJ%3BEACE%2CmBAAA%3BEACA%2CWAAA%3BEACA%2CyBAAA%3B%3BAAHF%2CKAKE%3BEACE%2CyBAAA%3B%3BAAGJ%3BEAGE%2CgCAAA%3BEACA%2CgBAAA%3BEACA%2CuCAAA%3BEACA%2CeAAA%3B%3BAAGF%3BEACE%2CuBAAA%3B%3BAAGA%2CKADI%2CGACH%3BEACC%2CyBAAA%3B%3BAAKJ%2CKAAM%3BEACJ%2CcAAA%3B%3BAACA%2CKAFI%2CUAEH%3BED1BD%2CaAAa%2CaAAb%3BEC4BE%2CkBAAA%3BEACA%2CSAAS%2COAAT%3B%3BAAEF%2CKAPI%2CUAOH%3BED%2FBD%2CaAAa%2CaAAb%3BECiCE%2CkBAAA%3BEACA%2CYAAA%3BEACA%2CSAAS%2COAAT%3B%3BAAGF%2CKAdI%2CUAcH%2CsBAAsB%2CIAAI%2CcAAc%3BEACvC%2CcAAA%3B%3BAAEF%2CKAjBI%2CUAiBH%2CsBAAsB%2CYAAY%3BEACjC%2CcAAA%3B%3BAAMA%2CIAFA%2CSACF%2CMAAM%2CUACH%2CMAAM%3BAACP%2CIAHA%2CSACF%2CMAAM%2CUAEH%2CMAAM%3BEACL%2CcAAA%3B%3BAAKF%2CIATA%2CSAQF%2CMAAM%2CGACH%3BEACC%2CyBAAA%3B%3BAC5DN%2CYACE%3BEACE%2CeAAA%3BEACA%2CiBAAA%3BEACA%2CyBAAA%3BEACA%2CgCAAA%3BEACA%2CeAAA%3B%3BAAEF%2CYAAC%2CQAAS%3BEACR%2CyBAAA%3B%3BAAKJ%2CIAAI%2CSAAU%2CaACZ%2CGAAE%3BEACA%2CyBAAA%3B%3BAAEF%2CIAJE%2CSAAU%2CaAIX%2CIAAI%2CUAAW%2CGAAE%3BEAChB%2CyBAAA%3B%3BAChBJ%3BEACE%2CkBAAA%3BEACA%2CgBAAA%3BEAEA%2CMAAA%3B%3BAAGF%2CmBACE%3BAADF%2CmBAEE%3BEAEE%2CcAAA%3BEACA%2CWAAA%3BEACA%2CYAAA%3BEACA%2CgBAAA%3BEACA%2CkBAAA%3B%3BAARJ%2CmBAUE%3BEACE%2CWAAW%2CaAAX%3B%3BAAXJ%2CmBAcE%3BEACE%2CWAAW%2CgBAAX%3BEHwMF%2CkBAAA%3BEACA%2CMAAA%3BEACA%2CSAAA%3BEACA%2CQAAA%3BEACA%2COAAA%3BEAKA%2CiBAAA%3B%3BAGhOF%2CmBAcE%2COAIE%3BEHqMF%2CkBAAA%3BEACA%2CMAAA%3BEACA%2CSAAA%3BEACA%2CQAAA%3BEACA%2COAAA%3BEGtMI%2CSAAA%3BEACA%2CYAAA%3B%3BAAKN%2CIAAI%2CUACF%3BEACE%2CWAAW%2CiBAAX%3B%3BAAFJ%2CIAAI%2CUAIF%2CoBACE%3BEACE%2CWAAW%2CiBAAX%3B%3BAANN%2CIAAI%2CUAIF%2CoBAIE%3BEACE%2CWAAW%2CaAAX%3B%3BAC9CN%2CWACE%3BEACE%2CcAAA%3BEACA%2CYAAA%3BEACA%2C4BAAA%3B%3BAAJJ%2CWAME%2CUAAS%2CKAAM%3BEACb%2CWAAA%3BEACA%2CkBAAA%3B%3BAARJ%2CWAWE%2CYAAW%3BEJPX%2CaAAa%2CaAAb%3BEISE%2CYAAA%3BEACA%2CgBAAA%3BEACA%2CSAAS%2COAAT%3BEACA%2CkBAAA%3BEACA%2CWAAA%3BEACA%2CWAAA%3B%3BAAlBJ%2CWAsBE%2CeAAc%2CKAAG%3BEACf%2CmBAAA%3B%3BAACA%2CWAFF%2CeAAc%2CKAAG%2CIAEd%3BAACD%2CWAHF%2CeAAc%2CKAAG%2CIAGd%3BAACD%2CWAJF%2CeAAc%2CKAAG%2CIAId%3BEACC%2CYAAA%3B%3BAA3BN%2CWA%2BBE%2CGAAG%3BEAED%2CkBAAA%3B%3BAAjCJ%2CWAyCE%3BEACE%2CgBAAA%3B%3BADkBF%2CgBAAC%2CqBAAsB%3BEACrB%2CcAAA%3B%3BAAFJ%2CgBAIE%3BEACE%2CaAAA%3B%3BAE7DJ%2CaACE%3BELiMA%2CgBAAgB%2C8BAAhB%3B%3BAKlMF%2CaACE%2COAEE%2CGAAE%3BELFJ%2CaAAa%2CaAAb%3BEKII%2CcAAA%3BEACA%2CSAAS%2COAAT%3BEACA%2CkBAAA%3BEACA%2CUAAA%3B%3BAARN%2CaAWE%3BELqMA%2CgBAAgB%2C0CAAhB%3BEACA%2C4BAAA%3BEKpME%2CYAAA%3B%3BAAbJ%2CaAWE%2COAGE%3BEACE%2CYAAA%3BEACA%2CWAAA%3B%3BAAhBN%2CaAmBE%3BEACE%2CiBAAA%3B%3BACpBJ%2CiBACE%3BENiMA%2CgBAAgB%2C8BAAhB%3B%3BAMlMF%2CiBACE%2CoBAEE%2CGAAE%3BENFJ%2CaAAa%2CaAAb%3BEMII%2CcAAA%3BEACA%2CSAAS%2COAAT%3BEACA%2CkBAAA%3BEACA%2CUAAA%3B%3BAARN%2CiBAWE%3BEACE%2CYAAA%3B%3BAAZJ%2CiBAWE%2CSAGE%2CMAAM%3BAAdV%2CiBAWE%2CSAIE%2CMAAM%3BEACJ%2CUAAA%3BEACA%2CYAAA%3BEACA%2C2BAAA%3B%3BAAlBN%2CiBAWE%2CSAUE%2CGAAE%2CKAAM%3BEACN%2CaAAA%3B%3BAAtBN%2CiBAWE%2CSAcE%3BEACE%2CUAAA%3BEACA%2CiBAAA%3BEACA%2CmBAAA%3B%3BAAGF%2CiBApBF%2CSAoBG%3BENuKH%2CcAAA%3B%3BAMvKE%2CiBApBF%2CSAoBG%2COAEC%3BEACE%2CaAAA%3B%3BAAHJ%2CiBApBF%2CSAoBG%2COAKC%3BENsKJ%2CmBAAA%3BEACA%2CsBAAA%3BEACA%2CkBAAA%3B%3BAM5MF%2CiBAyCE%3BEACE%2CiBAAA%3B%3BAC1CJ%2CuBACE%3BEACE%2CSAAA%3B%3BAAFJ%2CuBAIE%2CGAAE%3BEACA%2CyBAAA%3BEACA%2CuBAAA%3B%3BAANJ%2CuBASE%3BAATF%2CuBAUE%3BAAVF%2CuBAWE%3BEAKE%2CWAAA%3BEACA%2CeAAA%3BEACA%2CgBAAA%3B%3BAAlBJ%2CuBASE%2CgBAGE%3BAAZJ%2CuBAUE%2CkBAEE%3BAAZJ%2CuBAWE%2CoBACE%3BEACC%2CeAAA%3BEACA%2CgBAAA%3B%3BAAdL%2CuBASE%2CgBAWE%3BAApBJ%2CuBAUE%2CkBAUE%3BAApBJ%2CuBAWE%2CoBASE%3BEACE%2CoBAAA%3BEACA%2CmBAAA%3B%3BAAtBN%2CuBASE%2CgBAeE%3BAAxBJ%2CuBAUE%2CkBAcE%3BAAxBJ%2CuBAWE%2CoBAaE%3BAAxBJ%2CuBASE%2CgBAgBE%3BAAzBJ%2CuBAUE%2CkBAeE%3BAAzBJ%2CuBAWE%2CoBAcE%3BEACE%2CcAAA%3B%3BAA1BN%2CuBASE%2CgBAmBE%3BAA5BJ%2CuBAUE%2CkBAkBE%3BAA5BJ%2CuBAWE%2CoBAiBE%3BEACE%2CmBAAA%3BEACA%2CoBAAA%3B%3BAA9BN%2CuBASE%2CgBAuBE%3BAAhCJ%2CuBAUE%2CkBAsBE%3BAAhCJ%2CuBAWE%2CoBAqBE%3BEACE%2CiBAAA%3B%3BAAjCN%2CuBAoCE%3BEACE%2CgCAAA%3B%3BAArCJ%2CuBAoCE%2CgBAEE%3BEACE%2CYAAA%3B%3BAAvCN%2CuBA2CE%2CkBACE%2CSACE%3BEACE%2CeAAA%3BEACA%2CgBAAA%3B%3BAC9CR%2CgBACE%3BAADF%2CgBAEE%3BEACE%2CyBAAA%3BEACA%2CYAAA%3BEACA%2CsBAAA%3BEACA%2CkBAAA%3BER2LF%2CgBAAgB%2C8BAAhB%3BEQvLE%2CaAAA%3B%3BAAGF%2CgBAAC%2CmBAEC%3BAADF%2CgBAAC%2CqBACC%3BEACE%2CcAAA%3B%3BAAHJ%2CgBAAC%2CmBAKC%3BAAJF%2CgBAAC%2CqBAIC%3BEACE%2CaAAA%3B%3BAAIJ%2CgBAAC%2CqBACC%3BEACE%2CmBAAA%3B%3BAAKJ%2CgBAAC%2CmBACC%3BEACE%2CmBAAA%3BEACA%2CWAAA%3B%3BAAHJ%2CgBAAC%2CmBACC%2CoBAGE%2CEAAC%3BEACC%2CWAAA%3BEACA%2CWAAA%3BEACA%2CqBAAA%3B%3BAAKJ%2CgBAZD%2CmBAYE%2CqBACC%3BEACE%2CaAAA%3B%3BAChDR%3BEACE%2CyBAAA%3BEACA%2CcAAA%3BEACA%2CcAAA%3BEACA%2CiBAAA%3BEACA%2CYAAA%3BEACA%2CkBAAA%3BEACA%2COAAA%3BEACA%2CQAAA%3BEACA%2CYAAA%3B%3BAAGF%3BEAXE%2CyBAAA%3BEACA%2CcAAA%3BEAEA%2CiBAAA%3BEACA%2CYAAA%3BEACA%2CkBAAA%3BEACA%2COAAA%3BEACA%2CQAAA%3BEACA%2CYAAA%3BEAKA%2CMAAA%3BEACA%2CeAAA%3BEACA%2CcAAA%3BEACA%2CWAAA%3BEAKA%2CcAAA%3B%3BAAVF%2CSAME%2CEAAC%3BETdD%2CaAAa%2CaAAb%3BESgBE%2CSAAS%2COAAT%3B%3BAAGF%2CSAAC%3BEACC%2CcAAA%3B%3BAAIJ%3BEA3BE%2CyBAAA%3BEACA%2CcAAA%3BEACA%2CcAAA%3BEACA%2CiBAAA%3BEACA%2CYAAA%3BEACA%2CkBAAA%3BEACA%2COAAA%3BEACA%2CQAAA%3BEACA%2CYAAA%3BEAqBA%2CSAAA%3B%3BAAGF%2CGAEE%3BEACE%2CyBAAA%3BEACA%2CYAAA%3BEACA%2CgBAAA%3BEACA%2CSAAA%3BEACA%2CUAAA%3B%3BAAPJ%2CGAWE%2CeAAc%2CKAAG%3BEACf%2CsBAAA%3BEACA%2CoBAAA%3BEACA%2CqBAAA%3BEACA%2CcAAA%3BEACA%2CiBAAA%3B%3BAAEA%2CGAPF%2CeAAc%2CKAAG%2CIAOd%3BAACD%2CGARF%2CeAAc%2CKAAG%2CIAQd%3BAACD%2CGATF%2CeAAc%2CKAAG%2CIASd%3BEACC%2CgBAAA%3BEACA%2CcAAA%3B%3BAAtBN%2CGA0BE%3BEACE%2CgCAAA%3B%3BAACA%2CGAFF%2CGAEG%3BAACD%2CGAHF%2CGAGG%3BAACD%2CGAJF%2CGAIG%3BEACC%2CmBAAA%3B%3BAChEN%3BEACE%2CyBAAA%3B%3BAADF%2CeAGE%3BEACE%2CUAAA%3BEACA%2CeAAA%3B%3BAALJ%2CeAQE%3BEACE%2CqBAAA%3BEACA%2CUAAA%3BEACA%2CUAAA%3BEAGA%2CmBAAA%3B%3BAAdJ%2CeAgBE%3BEACE%2CqBAAA%3BEACA%2CUAAA%3BEACA%2CUAAA%3BEACA%2CiBAAA%3BEACA%2CcAAA%3B%3BAAEA%2CeAPF%2CmBAOG%3BEACC%2CUAAA%3B%3BAAEF%2CeAVF%2CmBAUG%3BEACC%2CgBAAA%3B%3BAA3BN%2CeA%2BBE%3BEACE%2CUAAA%3BEACA%2CgBAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3BEACA%2C2CAAA%3B%3BAAIJ%3BEACE%2CoCAAA%3BEACA%2CoCAAA%3BEACA%2CiBAAA%3BEACA%2CYAAA%3BEACA%2CoBAAA%3B%3BAALF%2COAOE%2CKAAI%3BAAPN%2COAQE%2CKAAI%3BEACA%2CWAAA%3B%3BAATN%2COAYE%3BEACE%2CuBAAA%3BEACA%2CcAAA%3BEACA%2CUAAA%3BEACA%2CYAAA%3BEACA%2CWAAA%3B%3BAAjBJ%2COAmBE%3BEACE%2CkBAAA%3BEACA%2CcAAA%3BEACA%2CgBAAA%3BEACA%2CWAAA%3BEACA%2CSAAA%3B%3BAAxBJ%2COA0BE%2CKAAI%2CIAAI%3BEACN%2C2BAAA%3B%3BAA3BJ%2COA6BE%2CKAAI%2CIAAI%3BEACN%2C6BAAA%3B%3BAAGJ%3BEACE%2CWAAA%3BEACA%2CWAAA%3B%3BAAEF%3BEACE%2CUAAA%3B%3BAAEF%2CaACE%3BEACE%2CYAAA%3BEACA%2CiBAAA%3B%3BAAHJ%2CaAKE%3BEACE%2CmBAAA%3BEACA%2CkBAAA%3B%3BAAPJ%2CaASE%3BAATF%2CaAUE%3BAAVF%2CaAaE%3BEACE%2CcAAA%3B%3BAAdJ%2CaAgBE%2CeAAc%3BEACZ%2CSAAS%2CKAAT%3B%3BAAKJ%3BEACE%2CqBAAA%3B%3BAAEA%2CcAAC%3BEACC%2CcAAA%3B%3BAAJJ%2CcAME%3BAANF%2CcAOE%3BEACE%2CqBAAA%3B%3BAAIJ%3BEACE%2CiBAAA%3BEACA%2CgBAAA%3BEACA%2CkBAAA%3BEAGA%2CaAAA%3BEACA%2CWAAA%3BEACA%2CaAAA%3BEACA%2CYAAA%3BEAEA%2C2CAAA%3BEAEA%2C6BAAA%3B%3BAACA%2CQAAC%3BEACC%2CUAAA%3B%3BAC9HJ%3BEA2DE%2CYAAA%3BEACA%2C4BAAA%3BEXsIA%2CgBAAgB%2C8BAAhB%3B%3BAWlMF%2CYACE%3BEACE%2CmBAAA%3BEACA%2CWAAA%3BEACA%2CyBAAA%3B%3BAAJJ%2CYACE%2CMAKE%3BEACE%2CcAAA%3BEACA%2CyBAAA%3B%3BAARN%2CYAYE%3BEAGE%2CgCAAA%3BEACA%2CgBAAA%3BEACA%2CuCAAA%3BEACA%2CeAAA%3B%3BAAlBJ%2CYAsBE%3BEACE%2CuBAAA%3B%3BAAIA%2CYADF%2CMAAM%2CGACH%3BEACC%2CyBAAA%3B%3BAA5BN%2CYAiCE%2CMAAM%3BEACJ%2CcAAA%3BEACA%2CkBAAA%3B%3BAAEA%2CYAJF%2CMAAM%2CUAIH%3BEXpCH%2CaAAa%2CaAAb%3BEA2KA%2CiBAAA%3BEWpII%2CkBAAA%3BEACA%2CSAAS%2COAAT%3B%3BAAEF%2CYAVF%2CMAAM%2CUAUH%3BEX1CH%2CaAAa%2CaAAb%3BEA2KA%2CiBAAA%3BEW9HI%2CkBAAA%3BEACA%2CSAAS%2COAAT%3BEACA%2CWAAA%3B%3BAAGF%2CYAlBF%2CMAAM%2CUAkBH%2CsBAAsB%2CIAAI%2CcAAc%3BEACvC%2CcAAA%3B%3BAAEF%2CYArBF%2CMAAM%2CUAqBH%2CsBAAsB%2CYAAY%3BEACjC%2CcAAA%3B%3BAAvDN%2CYA%2BDE%2CGAAE%3BEACA%2CiBAAA%3B%3BAAhEJ%2CYAsEE%2CGAAE%3BAAtEJ%2CYAuEE%2CGAAE%3BEACA%2CgBAAA%3BEACA%2CsBAAA%3B%3BAAzEJ%2CYA4EE%2CMAAM%2COAAO%3BEACX%2CcAAA%3BEACA%2CgBAAA%3B%3BAA9EJ%2CYAiFE%3BEX4EA%2CmBAAA%3BEACA%2CuBAAA%3BEACA%2CgBAAA%3B%3BAW%2FJF%2CYAqFE%2CeAAe%2CEAAC%3BEXpFhB%2CaAAa%2CaAAb%3BEWsFE%2CcAAA%3BEACA%2CSAAS%2COAAT%3B%3BAAxFJ%2CYA2FE%3BEACE%2CcAAA%3BEACA%2CcAAA%3B%3BAA7FJ%2CYAgGE%3BEACE%2CeAAA%3BEACA%2CiBAAA%3BEACA%2CyBAAA%3B%3BAAnGJ%2CYAsGE%3BEACE%2CqBAAA%3B%3BAAvGJ%2CYA0GE%2COACE%2CcAAc%3BEACZ%2CeAAA%3BEACA%2CYAAA%3BEACA%2C6BAAA%3B%3BAAEA%2CYANJ%2COACE%2CcAAc%2CEAKX%3BEACC%2CUAAA%3B%3B%3B%3B%3BAAUR%2CYAGE%3BEACE%2CaAAA%3B%3BAAJJ%2CYAME%2CMAEE%3BAARJ%2CYAME%2CMAGE%3BAATJ%2CYAME%2CMAIE%3BAAVJ%2CYAME%2CMAKE%3BEAEE%2CqBAAA%3BEACA%2CUAAA%3B%3BAAdN%2CYAME%2CMAUE%3BEACE%2CcAAA%3BEACA%2CiBAAA%3B%3BAAlBN%2CYAME%2CMAcE%3BEACE%2CkBAAA%3BEACA%2CiBAAA%3B%3BAAtBN%2CYAME%2CMAkBE%3BEACE%2CcAAA%3BEACA%2CqBAAA%3B%3BAA1BN%2CYAME%2CMAsBE%3BEACE%2CWAAA%3B%3BAA7BN%2CYAME%2CMA0BE%3BEACE%2CqBAAA%3B%3B%3B%3B%3BAAQN%2CYAAY%2CWAEV%3BEACE%2CaAAA%3B%3BAAHJ%2CYAAY%2CWAKV%2CMACE%3BAANJ%2CYAAY%2CWAKV%2CMAEE%3BAAPJ%2CYAAY%2CWAKV%2CMAGE%3BAARJ%2CYAAY%2CWAKV%2CMAIE%3BEAEE%2CqBAAA%3BEACA%2CUAAA%3B%3BAAZN%2CYAAY%2CWAKV%2CMASE%3BEACE%2CkBAAA%3B%3BAAfN%2CYAAY%2CWAKV%2CMAYE%3BEACE%2CoBAAA%3B%3BAAlBN%2CYAAY%2CWAKV%2CMAeE%3BEAEE%2CcAAA%3BEACA%2CoBAAA%3B%3BAAvBN%2CYAAY%2CWAKV%2CMAoBE%3BEACE%2CeAAA%3BEACA%2CWAAA%3B%3B%3B%3B%3B%3BAASN%2CYAAY%2CUAAU%2CWAGpB%3BAAFF%2CYAAY%2CUAEV%3BEACE%2C2BAAA%3B%3BAAJJ%2CYAAY%2CUAAU%2CWAOpB%3BAANF%2CYAAY%2CUAMV%3BAAPF%2CYAAY%2CUAAU%2CWAQpB%3BAAPF%2CYAAY%2CUAOV%3BAARF%2CYAAY%2CUAAU%2CWASpB%3BAARF%2CYAAY%2CUAQV%3BAATF%2CYAAY%2CUAAU%2CWAUpB%3BAATF%2CYAAY%2CUASV%3BEACE%2CmBAAA%3B%3BAAXJ%2CYAAY%2CUAAU%2CWAcpB%3BAAbF%2CYAAY%2CUAaV%3BEACE%2CUAAA%3B%3BAAfJ%2CYAAY%2CUAAU%2CWAiBpB%3BAAhBF%2CYAAY%2CUAgBV%3BEACE%2CUAAA%3B%3BAAlBJ%2CYAAY%2CUAAU%2CWAoBpB%3BAAnBF%2CYAAY%2CUAmBV%3BEACE%2CWAAA%3B%3BAArBJ%2CYAAY%2CUAAU%2CWAuBpB%3BAAtBF%2CYAAY%2CUAsBV%3BEACE%2CYAAA%3B%3BAAxBJ%2CYAAY%2CUAAU%2CWA0BpB%3BAAzBF%2CYAAY%2CUAyBV%3BEACE%2CaAAA%3B%3BAA3BJ%2CYAAY%2CUAAU%2CWA6BpB%2CMAAM%3BAA5BR%2CYAAY%2CUA4BV%2CMAAM%3BEACJ%2CkBAAA%3BEACA%2CqBAAA%3BEACA%2CgBAAA%3B%3BAAhCJ%2CYAAY%2CUAAU%2CWAkCpB%3BAAjCF%2CYAAY%2CUAiCV%3BEAEE%2C0BAAA%3B%3BACnNJ%2CQAP2B%3BEACzB%3BIACE%2CcAAA%3B%3B%3BACpBJ%3BEAEE%2CyBAAA%3BEACA%2CoBAAA%3BEACA%2CmBAAA%3BEACA%2CqBAAA%3B%3BAALF%2CYAOE%3BEACE%2CWAAA%3BEACA%2CaAAA%3BEACA%2CkBAAA%3BEACA%2CeAAA%3BEACA%2CoBAAA%3B%3BAAZJ%2CYAeE%3BEACE%2CmBAAA%3BEACA%2CiBAAA%3B%3BAAjBJ%2CYAmBE%3BEACE%2CiBAAA%3B%3BAApBJ%2CYA6BE%3BEACE%2CYAAA%3BEACA%2CWAAA%3BEACA%2CYAAA%3BEACA%2CcAAA%3B%3BAAjCJ%2CYAoCE%3BEACE%2CeAAA%3BEACA%2CYAAA%3BEACA%2C6BAAA%3B%3BAAvCJ%2CYAoCE%2CcAKE%3BEACE%2CUAAA%3B%3BAA1CN%2CYAoCE%2CcAQE%2CKAAI%3BEACF%2CYAAA%3B%3BAAKN%2CgBAAgB%2CqBACd%3BEACE%2CcAAA%3B%3BAAFJ%2CgBAAgB%2CqBAId%3BEACE%2CmBAAA%3BEACA%2CsBAAA%3BEACA%2CkBAAA%3B%3BAAGF%2CgBAVc%2CqBAUb%2CqBACC%3BEACE%2CaAAA%3B%3BAAKN%3BEACE%2CyBAAA%3B%3BACvEF%3BEACE%2CsBAAA%3BEACA%2CyBAAA%3BEACA%2CaAAA%3BEACA%2CYAAA%3BEAEA%2CgBAAA%3BEACA%2C4BAAA%3B%3BAAEA%2CcAAC%2CSAEC%2CGAAE%3BEACA%2CWAAW%2CaAAX%3B%3BAAZN%2CcAeE%3BEACE%2C0BAAA%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEACA%2CeAAA%3BEAEA%2C%2BBAAA%3BEACA%2CkCAAA%3B%3BAAGA%2CcAVF%2CGAUG%3BEACC%2CWAAA%3BEACA%2CkBAAA%3BEACA%2CYAAA%3BEACA%2C%2BBAAA%3BEdzBJ%2CaAAa%2CaAAb%3BEc2BI%2CSAAS%2COAAT%3B%3BAAKN%3BEAEE%2CWAAA%3B%3BAAEA%2CKAAC%3BEACC%2CYAAA%3B%3BAADF%2CKAAC%2CKAGC%2CGAAE%3BEACA%2CSAAS%2COAAT%3B%3BAARN%2CKAYE%3BEACE%2C0BAAA%3B%3BAAbJ%2CKAiBE%2CKAAI%3BAAjBN%2CKAkBE%2CKAAI%3BEACF%2CWAAA%3B%3BAAnBJ%2CKAsBE%3BEACE%2CuBAAA%3BEACA%2CcAAA%3B%3BAAxBJ%2CKA0BE%3BEACE%2CkBAAA%3BEACA%2CcAAA%3BEACA%2CgBAAA%3BEACA%2CWAAA%3BEACA%2CSAAA%3B%3BAA%2FBJ%2CKAiCE%3BAAjCF%2CKAkCE%3BEACE%2C6BAAA%3B%3BAAnCJ%2CKAuCE%3BEACE%2CUAAA%3BEACA%2CYAAA%3BEACA%2CWAAA%3B%3BAAEF%2CKAAC%2CWAAY%3BEACX%2CUAAA%3BEACA%2CYAAA%3BEACA%2CWAAA%3B%3BAAIJ%2CmBAAoB%3BEAClB%2CYAAA%3B%3BAADF%2CmBAAoB%2CKAElB%3BEACE%2CWAAA%3BEACA%2CaAAA%3BEACA%2CYAAA%3BEACA%2CkBAAA%3B%3BAFvDJ%2CQAJ2B%3BEG9B3B%3BIACE%2CkBAAA%3BIACA%2CgBAAA%3BIAEA%2CMAAA%3B%3BEAGF%2CmBACE%3BEADF%2CmBAEE%3BIAEE%2CcAAA%3BIACA%2CWAAA%3BIAEA%2CUAAA%3BIACA%2CWAAW%2CaAAX%3BIfqMF%2CkBAAA%3BIACA%2CSAAA%3BIACA%2CUAAA%3BIACA%2CWAAA%3BIACA%2CYAAA%3BIACA%2CUAAA%3B%3BEelNF%2CmBACE%2COASE%3BEAVJ%2CmBAEE%2COAQE%3BIfmMF%2CkBAAA%3BIACA%2CSAAA%3BIACA%2CUAAA%3BIACA%2CWAAA%3BIACA%2CYAAA%3BIACA%2CUAAA%3B%3BEelNF%2CmBAcE%3BIACE%2CUAAA%3BIACA%2CWAAW%2CaAAX%3B%3BEAhBJ%2CmBAkBE%3BIAEE%2CUAAA%3BIACA%2CWAAW%2CaAAX%3B%3BEAIJ%2CIAAI%2CUACF%3BIACE%2CWAAW%2CaAAX%3B%3BEAFJ%2CIAAI%2CUAIF%2CoBACE%3BIACE%2CWAAW%2CaAAX%3B%3BEANN%2CIAAI%2CUAIF%2CoBAIE%3BIAEE%2CWAAW%2CaAAX%3B%3BEAQN%2CmBAEE%3BEADF%2CgBACE%3BIACE%2CWAAA%3BIAEA%2CUAAA%3B%3BEALJ%2CmBAOE%3BEANF%2CgBAME%3BIACE%2CYAAA%3B%3BEAIJ%2CaACE%3BIACE%2CWAAA%3BIACA%2CUAAA%3B%3BEAHJ%2CaAKE%3BIACE%2CWAAA%3BIACA%2CUAAA%3B%3BEAPJ%2CaASE%3BIACE%2CeAAA%3BIACA%2CMAAA%3B%3BEAIJ%2CiBACE%3BIACE%2CWAAA%3BIACA%2CUAAA%3B%3BEAHJ%2CiBAKE%3BIACE%2CWAAA%3BIACA%2CUAAA%3B%3BEAIJ%3BIACE%2CaAAA%3B%3B%3BAAOF%2CQHlE2B%2CuBG8DA%3BEC%2FF3B%3BIACE%2CUAAA%3B%3BEADF%2CWAEE%3BIACE%2COAAA%3B%3BEACA%2CWAFF%2CeAEI%2CKAAK%3BIACL%2CiBAAA%3BIACA%2CiBAAA%3B%3BEANN%2CWASE%2CGAAG%3BIACD%2CoBAAA%3B%3BEAIJ%2CGAEE%3BIACE%2CcAAA%3BIACA%2CkBAAA%3BIACA%2CWAAA%3B%3BEALJ%2CGAOE%3BIACE%2CcAAA%3B%3BEARJ%2CGAWE%3BIACE%2CqBAAA%3BIACA%2CiBAAA%3B%3BIACA%2CiBAAA%3BIACA%2C8BAAA%3B%3BEAfJ%2CGAkBE%2CGAAE%3BIACA%2CiBAAA%3B%3BEAnBJ%2CGAsBE%3BIACE%2CaAAA%3B%3BEAIJ%3BIACE%2CaAAA%22%7D */

@@ -1,0 +1,39 @@
+// GENERICS
+@import "variables";
+@import "generic/appGeneric";
+@import "generic/table";
+@import "generic/listing";
+  // Mobile First
+@import "generic/layoutOffCanvas";
+  // PAGES
+@import "pages/mapPage";
+@import "pages/loggingPage";
+@import "pages/configurationPage";
+@import "pages/eventsPage";
+// *********************
+// COMPONENTS
+// *********************
+@import "components/navigation";
+// process list and styles
+// unfortunally this settings depend on the page style (full width or only 50% must be taken into account)
+@import "components/widgetCollection";
+@import "components/processListBasics";
+
+@media (max-width: 23rem ) {
+  body {
+    font-size: 80%;
+  }
+}
+
+
+@import "components/processView";
+@import "components/activityBlock";
+
+// *********************
+// MQ Tablet or Laptop Landscape
+// *********************
+@media (min-width: 600px ) {
+  @import "generic/layoutTwoColumns";
+}
+
+// end of min 600

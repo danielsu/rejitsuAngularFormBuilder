@@ -1,0 +1,45 @@
+// show (bootstrap dropdown) navigation as vertical list
+.navWrapper {
+  padding: 0;
+  .dropdown-menu {
+    left: 0;
+    & > li > a {
+      line-height: @navigation-height-medium;
+      padding-bottom: 0;
+    }
+  }
+  li .fa {
+    padding-right: 0.5em;
+  }
+}
+
+nav {
+  // overpower bootstrap
+  .dropdown-menu {
+    display: block;
+    position: relative;
+    float: none;
+  }
+  ul {
+    display: block;
+  }
+
+  li {
+    display: inline-block;
+    margin-left: -4px; /* remove space between inline blocks */
+    padding: 0 0.5rem;
+    border-left: 1px solid @navigation-separation-color;
+  }
+
+  li:first-child {
+    border-left: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+#activeMenuItem {
+  display: none;
+}

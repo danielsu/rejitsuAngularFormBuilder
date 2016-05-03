@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="jitsApp" ng-class="{'showDetailView' : showDetailView }">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="resources/images/favicon.ico">
+    <link rel="icon" href="resources/images/favicon.ico">
+
+
+    <meta http-equiv="expires" content="Sat, 01 Dec 2000 00:00:00 GMT">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+
+    <title>Just In Time Services Demo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="resources/styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/styles/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/styles/google-prettify/prettify.css">
+    <link rel="stylesheet" type="text/css" href="resources/styles/master.css">
+</head>
+
+<body>
+<div class="container-fluid">
+    <div ng-include="'pages/partials/navigation.html'"></div>
+    <ng-view></ng-view>
+</div>
+
+<!-- JavaScript -->
+<!-- helper libraries -->
+<script type="text/javascript" src="resources/scripts/lib/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="resources/scripts/lib/underscore.min.js"></script>
+<script type="text/javascript" src="resources/scripts/lib/modernizr.custom.min.js"></script>
+<!-- -->
+<script type="text/javascript" src="resources/scripts/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/scripts/lib/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="resources/scripts/lib/angularjs/angular-resource.min.js"></script>
+<script type="text/javascript" src="resources/scripts/lib/angularjs/angular-route.min.js"></script>
+<script type="text/javascript" src="resources/scripts/lib/angularjs/angular-cookies.min.js"></script>
+<script type="text/javascript" src="resources/scripts/lib/fastclick.js"></script>
+<script type="text/javascript" src="resources/scripts/lib/d3.min.js"></script>
+
+<!-- localizations, last one overwrites previous -->
+<script type="text/javascript" src="resources/scripts/lib/angularjs/i18n/angular-locale_de.js"></script>
+<!--<script type="text/javascript" src="../js/lib/angularjs/i18n/angular-locale_en.js"></script>-->
+<!--<script type="text/javascript" src="../js/lib/angularjs/i18n/angular-locale_fr.js"></script>-->
+<!--<script type="text/javascript" src="../js/lib/angularjs/i18n/angular-locale_zh.js"></script>-->
+
+<!-- AngularJS services, controllers, ... -->
+<script type="text/javascript" src="resources/scripts/app.js"></script>
+<!-- rejitsu -->
+<script type="text/javascript" src="resources/scripts/rejitsuHelpers.js"></script>
+<script type="text/javascript" src="resources/scripts/rejitsuDirectives.js"></script>
+
+<script type="text/javascript" src="resources/scripts/lib/google-prettify/prettify.js"></script>
+</body>
+</html>
